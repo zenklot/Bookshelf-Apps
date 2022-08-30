@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps - Raisa Supriatna</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="content-wrap">
+    <header class="header">
+        <h1 class="header-title">Bookshelf Apps - Raisa Supriatna</h1>
+        <h3 class="header-description">Catatan Penyimpanan Buku-buku ku</h3>
+    </header>
+    <section class="search">
+        <div class="search-content">
+            <input type="search" name="search_input" id="search_input" placeholder="Cari Judul Buku...">
+            <button class="search-btn">&#128269; Cari...</button>
+        </div>
+    </section>
+    <div class="content">
+        <div class="books">
+            <h1 class="books-title">Masukan Buku Baru</h1>
+            <form class="books-form">
+                <label for="judul_buku">Judul</label>
+                <input type="text" name="judul" id="judul_buku" placeholder="Judul Buku">
+                <span class="books-form-alert" id="judul_alert">Judul buku wajib diisi!</span>
+                <label for="penulis_buku">Penulis</label>
+                <input type="text" name="penulis" id="penulis_buku" placeholder="Penulis Buku">
+                <span class="books-form-alert" id="penulis_alert">Penulis buku wajib diisi!</span>
+                <label for="tahun_buku">Tahun</label>
+                <input type="text" name="tahun" id="tahun_buku" placeholder="2000" maxlength="4" minlength="4" >
+                <span class="books-form-alert" id="tahun_alert">Tahun Wajib diisi!</span>
+                <label for="selesai_baca" class="books-checkbox">
+                    <p>Selesai dibaca</p>
+                    <input type="checkbox" name="selesai" id="selesai_baca">
+                </label>
+                <button type="submit" class="btn" id="btn-save">Masukan Buku ke rak</button>
+                <button type="reset" class="btn btn-reset" id="btn-reset">Batal Edit Buku</button>
+            </form>
+        </div>
+        <div class="raks">
+            <div class="read-book">
+                <div class="read-book-header">
+                    <h1 class="read-book-title">Buku Selesai Dibaca</h1>
+                    <div class="icon-finish">
+                        &check;
+                    </div>
+                </div>
+                <div class="read-book-content" id="readed-content" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchmove="allowDrop(event)">
+                    
+                </div>
+            </div>
+            <div class="unread-book">
+                <div class="unread-book-header">
+                    <h1 class="read-book-title">Buku Belum Dibaca</h1>
+                    <div class="icon-unfinish">
+                        &#10539
+                    </div>
+                </div>
+                <div class="unread-book-content" id="unreaded-content" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast-info">
+        <div class="toast-icon"></div>
+        <div class="toast-detail">
+            <h2 class="toast-title"></h2>
+            <p class="toast-description"></p>
+        </div>
+        <!-- <div class="toast-close"></div> -->
+    </div>
+</div>
+    <footer class="footer">
+        <p>Copyright &copy; 2022 ~ Code With Love By Raisa Supriatna</p>
+    </footer>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
